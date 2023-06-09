@@ -25,7 +25,7 @@ const fetchAllPlayers = async () => {
 
 const fetchSinglePlayer = async (playerId) => {
     try {
-        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players/${playerId}/`);
+        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players/${playerId}`);
         // console.log(response);
         const playerId = await response.json();
         return playerId;
@@ -36,7 +36,7 @@ const fetchSinglePlayer = async (playerId) => {
 
 const addNewPlayer = async (playerObj) => {
     try {
-        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players/${playerObj}/`);
+        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players/${playerObj}`);
         // console.log(response);
         const playerObj = await response.json();
         return playerObj;
@@ -46,8 +46,18 @@ const addNewPlayer = async (playerObj) => {
 };
 
 const removePlayer = async (playerId) => {
+//     fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players/${playerId}/`, {
+//     method: 'DELETE',
+//   });
     try {
-
+        const response = await fetch(
+            `https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players/${playerId}`,
+            {
+              method: 'DELETE',
+            }
+          );
+          const result = await response.json();
+          console.log(result);
     } catch (err) {
         console.error(
             `Whoops, trouble removing player #${playerId} from the roster!`,
