@@ -13,7 +13,7 @@ const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}/`;
  */
 const fetchAllPlayers = async () => {
     try {
-    const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players');
+    const response = await fetch(APIURL);
     // console.log(response);
     const players = await response.json();
     return players;
@@ -46,8 +46,15 @@ const addNewPlayer = async (playerObj) => {
 };
 
 const removePlayer = async (playerId) => {
-    try {
-
+        try {
+            const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players/${playerId}/`,
+            {
+                method: 'DELETE',
+            }
+            );
+            // console.log(response);
+            const result = await response.json();
+            console.log(result);
     } catch (err) {
         console.error(
             `Whoops, trouble removing player #${playerId} from the roster!`,
