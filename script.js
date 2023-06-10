@@ -15,7 +15,7 @@ const fetchAllPlayers = async () => {
     try {
     const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-WEB-PT-A/players');
     // console.log(response);
-    const players = await response.json();
+    const player = await response.json();
     return players;
 
     } catch (err) {
@@ -86,9 +86,39 @@ const removePlayer = async (playerId) => {
  * @param playerList - an array of player objects
  * @returns the playerContainerHTML variable.
  */
-const renderAllPlayers = (playerList) => {
+const renderAllPlayers = async (playerList) => {
     try {
+        console.log(playerList)
+        playerContainer.innerHTML = '';
+        playerList.forEach((player) => {
+            const playerElement = document.createElement('div');
+            playerElement.classList.add('player');
+            playerElement.innerHTML = `
+            <h2>${player.name}</h2>
+            <p>${player.breed}</p>
+            <p>${player.status}</p>
+            <button class="details-button" data-id=${playerId}">See Details</button>
+            <button class="delete-button" data-id="${playerId}">Delete</button>
+           `; 
+           playerContainer.appendChild(playerElement);
+
+        });
+         const detailsButton =playerElement.quarySelector('.details-button');
+         detailsButton.addPlayerListerner ('click',async (event) => {
+            const playerId=event.target.dataset.playerId
+            renderAllPlayers (playerId)
+
+        const deleteButton = playerElement.querySelector('.delete-button');
+        deleteButton.addPlayerListerner ('click',async (event)=> {
+            const playerId=event.target.dataset.playerId
+            deleteplayer(playerId)
+            event.target.cloeset('div.party').remove()
+        });
+         
+
         
+    });  
+         
     } catch (err) {
         console.error('Uh oh, trouble rendering players!', err);
     }
@@ -111,7 +141,7 @@ const init = async () => {
     const players = await fetchAllPlayers();
     renderAllPlayers(players);
 
-    renderNewPlayerForm();
+    renderNewPlayerForm(players);
 }
 
 init();
