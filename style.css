@@ -75,7 +75,7 @@ h2 {
 
 .player .details-button,
   .player .Add-button,
-  .player .Remove-button {
+  .player .removeButton {
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -97,13 +97,13 @@ h2 {
     background-color: #158280;
   }
   
-  .player .Remove-button {
+  .player .removeButton {
     background-color: #08411a;
   }
   
   .player .details-button:hover,
   .player .Add-button:hover,
-  .player .Remove-button:hover {
+  .player .removeButton:hover {
     background-color: #6e6e6e;
   }
   
