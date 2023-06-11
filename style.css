@@ -31,7 +31,9 @@ h1 {
 }
 
 .player {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #25242be0;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -43,6 +45,8 @@ h1 {
 .player h2 {
   text-transform: uppercase;
   text-align: right;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
   color: #dbf257;
   font-size: 20px;
   margin-bottom: 10px;
@@ -99,6 +103,58 @@ h1 {
     max-width: 75px;
     max-height: 75px;
   }
+
+  /* CSS for the player form */
+form {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  margin-bottom: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+form {
+  padding: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="file"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form [type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #10656d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form [type="submit"]:hover {
+  background-color: #6c54bc;
+}
+/* You can add this CSS code to your existing style.css file or create a new CSS file and link it in your HTML file using the <link> tag. */
+
+
+
+
+
+
+
 /* 
 
 
