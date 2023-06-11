@@ -120,52 +120,45 @@ h2 {
   }
 
   /* CSS for the player form */
-form {
-  display: flex;
-  margin-top: 20px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  align-items: baseline;
-  justify-content: space-evenly;
-}
-
-form h2 {
-  margin-bottom: 10px;
-}
-
-form {
-  width: 100%;
-}
-
-form {
-  padding: 5px;
-}
-
-.form-container input[type="text"],
-.form-container input[type="file"] {
-  width: 100%;
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-form [type="submit"] {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #10656d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form [type="submit"]:hover {
-  background-color: #6c54bc;
-}
-/* You can add this CSS code to your existing style.css file or create a new CSS file and link it in your HTML file using the <link> tag. */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="url"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
 
 
 
