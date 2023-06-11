@@ -10,8 +10,8 @@ Welcome to the Puppy Bowl Web App! This web application allows you to manage a r
 - Updates the UI dynamically when actions are performed (e.g., adding, removing players).
 
 ## This is a collaborative effort with the greatest Learning Team ever!
-Donna Griffith
-Samantha Ashford
-Dion Charles
-Ana Carolina Hernandez
+Donna Griffith,
+Samantha Ashford,
+Dion Charles,
+Ana Carolina Hernandez,
 Milagros Ubaldo
