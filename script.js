@@ -6,6 +6,17 @@ const cohortName = "2302-ACC-PT-WEB-PT-A";
 // Use the APIURL variable for fetch requests
 const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}/players`;
 
+// helper function to toggle player visibility
+function togglePlayerListVisibility(displayVal,) {
+  const playerElements = document.getElementsByClassName('player');
+  for (const playerElement of playerElements) {
+      playerElement.style.display = displayVal;
+  }
+
+  //also toggle the form
+  newPlayerFormContainer.style.display = displayVal;
+}
+
 /**
  * It fetches all players from the API and returns the
  * @returns An array of objects.
@@ -31,6 +42,19 @@ const fetchSinglePlayer = async (playerId) => {
     return player;
   } catch (error) {
     console.error(`Oh no, trouble fetching player #${playerId}!`, err);
+  }
+};
+
+const renderPlayerDetails = async (playerId) => {
+  try {
+    const player = await fetchSinglePlayer(playerId);
+    if (player) {
+      // Display the player details
+      console.log(player);
+      // Replace this with your code to render the player details in the DOM
+    }
+  } catch (error) {
+    console.error("Uh oh, trouble rendering player details!", error);
   }
 };
 
@@ -69,6 +93,7 @@ const removePlayer = async (playerId) => {
     );
   }
 };
+
 const renderAllPlayers = async (players) => {
   try {
     playerContainer.innerHTML = "";
@@ -82,16 +107,52 @@ const renderAllPlayers = async (players) => {
             <img src=${player.imageUrl}/>
             <div class="button-container">
             <button class="details-button" data-id="${player.id}">See Details</button>
-           
             <button class="removeButton" data-id="${player.id}">Remove From Roster</button>
             `;
       playerContainer.appendChild(playerElement);
 
+      const renderSinglePlayerById = async (id) => {
+        try {
+            //fetch player details from server
+            const player = await fetchSinglePlayer(id);
+    
+            //create a new HTML element to display player details
+            const playerDetailsElememt = document.createElement('div');
+            playerDetailsElememt.classList.add('player-details'); 
+            playerDetailsElememt.innerHTML = `
+                <h2>${player.name}</h2>
+                <p><img src = ${player.imageUrl}></p>
+                <p>ID:${player.id}</p>
+                <p>Breed:${player.breed}</p>
+                <p>Status:${player.status}</p>
+                <p>Created at:${player.createdAt}</p>
+                <p>Updated at:${player.updatedAt}</p>
+                <p>Team ID:${player.teamId}</p>
+                <p>Cohort ID:${player.cohortId}</p>
+                <button class="close-button">Close</button>
+            `;
+    
+            playerContainer.appendChild(playerDetailsElememt);
+    
+            // add event listener to close button
+            const closeButton = playerDetailsElememt.querySelector('.close-button');
+            closeButton.addEventListener('click', () => {
+                playerDetailsElememt.remove();
+                togglePlayerListVisibility('flex');
+            });
+        } catch (err) {
+            console.error(`Uh oh, trouble rendering player #${playerId}!`, err);
+        }
+    }
+
       // details button
-      const detailsButton = playerElement.querySelector(".details-button");
-      detailsButton.addEventListener("click", async (event) => {
-        let playerId = event.currentTarget.dataset.id;
-        await RenderPlayerById(playerId);
+      const detailsButton = playerElement.querySelector('.details-button');
+      detailsButton.addEventListener('click', async (event) => {
+          //hide the list of players (to create a clean slate for a detailed player to show)
+          togglePlayerListVisibility('none');
+
+          //show the details of the player clicked
+          renderSinglePlayerById(event.target.dataset.id);
       });
       //remove button
       const removeButton = playerElement.querySelector(".removeButton");
@@ -141,7 +202,7 @@ const renderNewPlayerForm = () => {
       event.preventDefault();
       console.log("Player submit clicked");
       const playerName = addPlayerForm.elements.name.value;
-      const playerBreed = addPlayerForm.elements["input-breed"].value
+      const playerBreed = addPlayerForm.elements["input-breed"].value;
       const playerStatus = addPlayerForm.elements.status.value;
       const playerImageUrl = addPlayerForm.elements.imageUrl.value;
 
