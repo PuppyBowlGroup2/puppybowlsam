@@ -93,7 +93,8 @@ margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.player p {
+.player p,
+.player-details p {
   display: flex;
   flex-direction: column-reverse ;
   color: #666;
