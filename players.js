@@ -100,7 +100,7 @@ const fetchAllPlayers = async () => {
               <h2>${player.name}</h2>
               <p>${player.breed}</p>
               <p>${player.status}</p>
-              <img src=${player.imageUrl}/>
+              <img src="${player.imageUrl}"/>
               <div class="button-container">
               <button class="details-button" data-id="${player.id}">See Details</button>
               <button class="removeButton" data-id="${player.id}">Remove From Roster</button>
@@ -117,7 +117,7 @@ const fetchAllPlayers = async () => {
               playerDetailsElememt.classList.add('player-details'); 
               playerDetailsElememt.innerHTML = `
                   <h2>${player.name}</h2>
-                  <p><img src = ${player.imageUrl}></p>
+                  <p><img src = "${player.imageUrl}"></p>
                   <p>ID:${player.id}</p>
                   <p>Breed:${player.breed}</p>
                   <p>Status:${player.status}</p>
