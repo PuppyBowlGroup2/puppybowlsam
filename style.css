@@ -5,38 +5,69 @@
 }
 
 body {
+  
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-image: url(Images/Puppy_and_his_ball.jpg);
+  /* background-image: url(Images/Puppy_and_his_ball.jpg); */
   background-size: cover;
-  background-color: rgb(51, 38, 63);
+  background-color: rgb(38, 44, 81);
 }
 
 h1 {
+  padding-bottom: 20px ;
   text-transform: uppercase;
-  color: white;
+  color: rgb(153, 200, 238);
   font-size: 50px;
   text-align: center;
 }
 h2 {
-  color: white;
+  color: rgb(135, 188, 38);
   font-size: 30px;
   text-align: center;
   padding: 10px;
   margin: 10px;
+  margin-bottom: 15px;
 }
 
-.welcome {
+/* .welcome {
   color: white;
   font-size: 30px;
   text-align: center;
   background-color: darkgreen;
   padding: 10px;
+} */
+
+#add-player-form {
+ width: 100vw;
+color: #ccc;
+}
+
+.flipped-image {
+  transform: scaleX(-1);
+ 
 }
 
 #new-player-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: center;
   margin-bottom: 20px;
+  padding: 50px;
+}
+
+.welcome-statement {
+margin: 6vw;
+margin-top: 15px;
+}
+
+.welcome-text {
+  color: rgb(232, 216, 196);
+  font-size: 30px;
+  margin-top: 30px;
+  text-align: center;
 }
 
 #all-players-container {
@@ -64,7 +95,7 @@ h2 {
   text-align: right;
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  color: #dbf257;
+  color: #dfee8b;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -117,8 +148,8 @@ h2 {
   }
 
   img {
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 250px;
+    max-height: 250px;
   }
 
   /* CSS for the player form */
