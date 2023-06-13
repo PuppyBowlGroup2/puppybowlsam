@@ -184,6 +184,7 @@ const fetchAllPlayers = async () => {
           <label>TeamId: </label>
           <input type="number" name="teamId" placeholder="" required><br><br>
           <input type="submit" id="input-submit" value="Add new Player">
+          
         </form>
         <div class = "welcome-statement">
         <header>
