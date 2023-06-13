@@ -7,27 +7,31 @@
 body {
   
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  /* background-image: url(Images/Puppy_and_his_ball.jpg); */
-  background-size: cover;
-  background-color: rgb(38, 44, 81);
+  background-image: url(Images/Field\ cropped.jpg); 
+  background-position: center;
+background-size: cover;
+background-attachment: fixed;
 }
 
 h1 {
   padding-bottom: 20px ;
   text-transform: uppercase;
   color: rgb(153, 200, 238);
-  font-size: 50px;
+  font-size: 4rem;
   text-align: center;
 }
-h2 {
+h2,
+h3 {
   color: rgb(135, 188, 38);
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   padding: 10px;
   margin: 10px;
   margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 
@@ -42,6 +46,7 @@ color: #ccc;
 }
 
 #new-player-form {
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -257,3 +262,5 @@ button[type="submit"]:hover {
 h2 {
   margin-bottom: 10px;
 } */ 
+
+/* <img src="https://i.etsystatic.com/39174003/r/il/2d2424/4510396670/il_794xN.4510396670_ggob.jpg" style="height: 200px; width: 200px";  alt="Puppy Bowl Image" class="flipped-image"> */

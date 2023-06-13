@@ -167,8 +167,9 @@ const fetchAllPlayers = async () => {
     try {
       // createdAt and updatedAt should be created by the app, not the user. exclude them from the form
       let form = `
+      
         <form id="add-player-form">
-        <h2>Add New Puppy Bowl Player</h2>
+        <h3>Add New Puppy Bowl Player</h3>
           <label>Name: </label>
           <input type="text" name="name" placeholder="" required><br><br>
           <label for="input-breed">Breed: </label>
@@ -199,7 +200,7 @@ const fetchAllPlayers = async () => {
         avalanche of cuteness. Puppy Bowl 2023 is an event you won't want to miss, where the stakes are high, the fur is
         fluffy, and the "awwws" are in abundance. Get ready for a barking good time!</p>
         </div>
-        <img src="https://i.etsystatic.com/39174003/r/il/2d2424/4510396670/il_794xN.4510396670_ggob.jpg" style="height: 200px; width: 200px";  alt="Puppy Bowl Image" class="flipped-image">
+       
        
       `;
       newPlayerFormContainer.innerHTML = form;
