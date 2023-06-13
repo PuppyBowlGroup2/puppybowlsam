@@ -1,28 +1,229 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-};
+}
 
-div #new-player-form {
+body {
+  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  /* background-image: url(Images/Puppy_and_his_ball.jpg); */
+  background-size: cover;
+  background-color: rgb(38, 44, 81);
+}
 
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-};
-div #all-players-container{
-     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+h1 {
+  padding-bottom: 20px ;
+  text-transform: uppercase;
+  color: rgb(153, 200, 238);
+  font-size: 50px;
+  text-align: center;
+}
+h2 {
+  color: rgb(135, 188, 38);
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 15px;
+}
 
-};
-body{
-  background-color:RBG 6, 174, 213;
 
+#add-player-form {
+ width: 100vw;
+color: #ccc;
+}
+
+.flipped-image {
+  transform: scaleX(-1);
+ 
+}
+
+#new-player-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 50px;
+}
+
+.welcome-statement {
+margin: 6vw;
+margin-top: 15px;
+}
+
+.welcome-text {
+  color: rgb(232, 216, 196);
+  font-size: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#all-players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.player,
+.player-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #25242be0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+}
+
+.player h2,
+.player-details h2 {
+  text-transform: uppercase;
+  text-align: right;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: #dfee8b;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.player p,
+.player-details p {
+  display: flex;
+  flex-direction: column-reverse ;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: end;
+}
+
+.player .details-button,
+  .player .Add-button,
+  .player .removeButton {
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .player .details-button {
+    background-color: #460c85;
+  }
+  
+  .player .Add-button {
+    background-color: #158280;
+  }
+  
+  .player .removeButton {
+    background-color: #08411a;
+  }
+  
+  .player .details-button:hover,
+  .player .Add-button:hover,
+  .player .removeButton:hover {
+    background-color: #6e6e6e;
+  }
+  
+  @media (max-width: 768px) {
+    .player,
+    .players-details {
+      width: 100%;
+    }
+  }
+
+  img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  /* CSS for the player form */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="url"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+
+
+/* 
+
+
+
+
+
+/* div#new-player-form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+div#all-players-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: url(./Images/Puppy_and_his_ball.jpg);
+  background-size: cover;
 }
 
 /* Add some basic styling */
-.form-group {
+/* .form-group {
   margin-bottom: 10px;
 }
 
@@ -55,4 +256,4 @@ button[type="submit"]:hover {
 
 h2 {
   margin-bottom: 10px;
-}
+} */ 

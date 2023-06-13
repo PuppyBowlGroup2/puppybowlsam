@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <!-- <script type = 'module' defer src="./main.js"></script> -->
+  <link rel="stylesheet" href="./style.css">
   <title>PuppyBowl</title>
 </head>
-<body>
-  <!-- form to add new players -->
-  <div id="new-player-form">
-    <h2>Add New Puppy Bowl Player</h2>
-    <form id="player-form">
-      <label for="player-name">Name:</label>
-      <input type="text" id="player-name" required>
-      <br>
-      <label for="player-position">Position:</label>
-      <input type="text" id="player-position" required>
-      <br>
-      <button type="submit">Add Player</button>
-    </form>
-  </div>
 
+<body>
+ 
+  
+  <div id="new-player-form"></div>
+  <!-- Participants will be dynamically rendered here -->
+ 
   <!-- container for all players -->
-  <div id="all-players-container">
-    <h2>Puppy Bowl Participants</h2>
-    <!-- Participants will be dynamically rendered here -->
-  </div>
+  <h2>Meet This Years Puppers</h2>
+  <div id="all-players-container";></div>
+  <!-- form to add new players -->
+
 
   <!-- import JavaScript -->
-  <script src="./script.js"></script>
+  
+  <script src="./main.js" type="module"></script>
 </body>
+
 </html>
