@@ -9,7 +9,7 @@ Welcome to the Puppy Bowl Web App! This web application allows you to manage a r
 - Shows player details and allows removing a player from the roster.
 - Updates the UI dynamically when actions are performed (e.g., adding, removing players).
 
-## This is a collaborative effort with the greatest Learning Team ever!
+## This is a collaborative effort with the greatest Learning Team ever!!
 Donna Griffith,
 Samantha Ashford,
 Dion Charles,
