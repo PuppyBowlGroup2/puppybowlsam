@@ -153,12 +153,12 @@ margin-top: 15px;
     background-color: #6e6e6e;
   }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .player,
     .players-details {
       width: 100%;
-    }
-  }
+    } */
+  /* } */
 
   img {
     max-width: 250px;
