@@ -52,13 +52,14 @@ color: #ccc;
   flex-wrap: nowrap;
   align-content: flex-start;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: -86px;
   padding: 50px;
 }
 
 .welcome-statement {
 margin: 6vw;
 margin-top: 15px;
+
 }
 
 .welcome-text {
@@ -79,33 +80,43 @@ margin-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #25242be0;
+  background: linear-gradient(to bottom, rgb(51, 51, 95), rgb(5, 64, 5));
+  /* background-color: #25242be0; */
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 25px;
   margin: 20px;
   width: 300px;
+  justify-content: flex-start;
 }
 
 .player h2,
 .player-details h2 {
   text-transform: uppercase;
-  text-align: right;
+  text-align-last: right;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   color: #dfee8b;
   font-size: 20px;
   margin-bottom: 10px;
+  margin-right: -10px;
 }
 
 .player p,
 .player-details p {
   display: flex;
   flex-direction: column-reverse ;
-  color: #666;
+  color: #faf5f5;
   font-size: 14px;
   margin-bottom: 10px;
   text-align: end;
+  
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .player .details-button,
@@ -129,11 +140,11 @@ margin-top: 15px;
   }
   
   .player .Add-button {
-    background-color: #158280;
+    background-color: #4d9796;
   }
   
   .player .removeButton {
-    background-color: #08411a;
+    background-color: #1d5d68;
   }
   
   .player .details-button:hover,
@@ -142,16 +153,17 @@ margin-top: 15px;
     background-color: #6e6e6e;
   }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .player,
     .players-details {
       width: 100%;
-    }
-  }
+    } */
+  /* } */
 
   img {
     max-width: 250px;
     max-height: 250px;
+    min-height: 250px;
   }
 
   /* CSS for the player form */
@@ -178,7 +190,7 @@ margin-top: 15px;
   }
   
   input[type="submit"] {
-    background-color: #4caf50;
+    background-color: #4c6faf;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -196,15 +208,58 @@ margin-top: 15px;
   }
 
 
+  @media screen and (max-width: 500px) {
+
+    #new-player-form {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin: 5px;
+  } 
+
+  h1 {
+    /* padding-bottom: 20px; */
+    text-transform: uppercase;
+    color: rgb(153, 200, 238);
+    font-size: 2rem;
+    text-align: center;
+    padding: 1px;
+}
+
+.welcome-text {
+  color: rgb(232, 216, 196);
+  font-size: 14px; 
+  margin-top: 30px;
+  text-align: center;
+}
 
 
+  
+
+  h2, h3 {
+    color: rgb(221, 244, 174);
+    
+    text-align: center;
+    padding: -5px;
+    margin: 10px;
+    margin-bottom: 15px;
+    
+	font-size: 22px;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
 
 
+#add-player-form {
+  width: 100vw; 
+  color: #ccc;
+}
 
-/* 
+form {
+  max-width: 305px;
+} 
 
-
-
+};
 
 
 /* div#new-player-form {

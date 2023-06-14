@@ -169,7 +169,7 @@ const fetchAllPlayers = async () => {
       let form = `
       
         <form id="add-player-form">
-        <h3>Add New Puppy Bowl Player</h3>
+        <h3>Add Your Goodest Pupper to the Roster!!</h3>
           <label>Name: </label>
           <input type="text" name="name" placeholder="" required><br><br>
           <label for="input-breed">Breed: </label>
@@ -184,6 +184,7 @@ const fetchAllPlayers = async () => {
           <label>TeamId: </label>
           <input type="number" name="teamId" placeholder="" required><br><br>
           <input type="submit" id="input-submit" value="Add new Player">
+          
         </form>
         <div class = "welcome-statement">
         <header>
