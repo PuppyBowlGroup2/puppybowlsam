@@ -12,6 +12,8 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  padding-right: 5rem;
+  padding-left: 5rem;
 }
 
 /* Styles for heading elements */
@@ -64,7 +66,7 @@ h2 {
 
 /* Styles for the container of the welcome statement */
 .welcome-statement {
-  margin: 8vw;
+  margin: 6vw;
   margin-top: 15px;
 
 }
@@ -225,6 +227,15 @@ input[type="submit"]:hover {
 /* Media query for small screens */
 @media screen and (max-width: 500px) {
 
+  /* Styles for the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(Images/Field\ cropped.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   /* Styles for the new player form */
   #new-player-form {
     display: flex;
@@ -237,10 +248,11 @@ input[type="submit"]:hover {
   h1 {
     text-transform: uppercase;
     color: rgb(153, 200, 238);
-    font-size: 2rem;
+    font-size: 50rem;
     text-align: center;
     padding: 1px;
   }
+
   /* Styles for the welcome text */
   .welcome-text {
     color: rgb(232, 216, 196);
@@ -267,8 +279,11 @@ input[type="submit"]:hover {
     width: 100vw;
     color: #ccc;
   }
+
   /* Styles for the add player form */
   form {
     max-width: 305px;
   }
-};
+}
+
+;
