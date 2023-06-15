@@ -197,17 +197,12 @@ const renderNewPlayerForm = () => {
         <div class = "welcome-statement">
         <header>
         <h1>Welcome to the 2023 Puppy Bowl!!!</h1> </header>
-        <p class = "welcome-text"> Welcome to the Puppy Bowl 2023, the cutest sporting event of the year! Get ready for a paw-some
-        display of puppy athleticism, where fur and fluff collide in an epic battle for the title of the Most Adorable
-        Athlete.But don't be fooled by their innocent looks – these pups are fierce competitors. They'll go head-to-head,
-        barking
-        their way to victory, and proving that size doesn't matter when it comes to determination and puppy power.
-        The halftime show promises to be an absolute treat, featuring the world-famous Puppy Marching Band and their
-        adorable rendition of "Who Let the Dogs Out." And let's not forget the Puppy Bowl cheerleaders, bringing their
-        infectious energy and tail-wagging enthusiasm to the sidelines.
-        So grab your snacks, snuggle up with your favorite four-legged friend, and prepare to be overwhelmed by an
-        avalanche of cuteness. Puppy Bowl 2023 is an event you won't want to miss, where the stakes are high, the fur is
-        fluffy, and the "awwws" are in abundance. Get ready for a barking good time!</p>
+        <p class = "welcome-text"> Welcome to the Puppy Bowl 2023, the cutest sporting event of the year!
+        <br>Come watch the fur and fluff collide in an epic battle for the title of the
+        <br>Most Adorable Athlete.
+        <br>Puppy Bowl 2023 is an event you won't want to miss! 
+        <br>The stakes are high and the fur is fluffy.
+        <br>Get ready for a barking good time!</p>
         </div>
       `;
     newPlayerFormContainer.innerHTML = form;

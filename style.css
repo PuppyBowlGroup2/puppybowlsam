@@ -43,6 +43,7 @@ h2 {
 #add-player-form {
   width: 100vw;
   color: #ccc;
+  padding-top: 30px;
 }
 
 /* Styles for the form to add a new player */
@@ -53,7 +54,7 @@ h2 {
   align-content: flex-start;
   align-items: center;
   margin-bottom: -86px;
-  padding: 50px;
+  padding: 25px;
 }
 
 /* Flips the image horizontally */
@@ -63,7 +64,7 @@ h2 {
 
 /* Styles for the container of the welcome statement */
 .welcome-statement {
-  margin: 6vw;
+  margin: 8vw;
   margin-top: 15px;
 
 }
@@ -178,7 +179,7 @@ img {
 /* Styles for the player form */
 form {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 5px;
 }
 
 /* Styles for labels in the player form */
