@@ -1,25 +1,29 @@
+/* Reset styles for all elements */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Global styles for the body */
 body {
-  
   font-family: Arial, sans-serif;
-  background-image: url(Images/Field\ cropped.jpg); 
+  background-image: url(Images/Field\ cropped.jpg);
   background-position: center;
-background-size: cover;
-background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
+/* Styles for heading elements */
 h1 {
-  padding-bottom: 20px ;
+  padding-bottom: 20px;
   text-transform: uppercase;
   color: rgb(153, 200, 238);
   font-size: 4rem;
   text-align: center;
 }
+
+/* Styles for heading elements */
 h2,
 h3 {
   color: rgb(135, 188, 38);
@@ -30,23 +34,19 @@ h3 {
   margin-bottom: 15px;
 }
 
+/* Styles for heading elements */
 h2 {
   font-size: 3rem;
 }
 
-
+/* Styles for the form to add a new player */
 #add-player-form {
- width: 100vw;
-color: #ccc;
+  width: 100vw;
+  color: #ccc;
 }
 
-.flipped-image {
-  transform: scaleX(-1);
- 
-}
-
+/* Styles for the form to add a new player */
 #new-player-form {
-
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -56,12 +56,19 @@ color: #ccc;
   padding: 50px;
 }
 
+/* Flips the image horizontally */
+.flipped-image {
+  transform: scaleX(-1);
+}
+
+/* Styles for the container of the welcome statement */
 .welcome-statement {
-margin: 6vw;
-margin-top: 15px;
+  margin: 6vw;
+  margin-top: 15px;
 
 }
 
+/* Styles for the welcome text */
 .welcome-text {
   color: rgb(232, 216, 196);
   font-size: 30px;
@@ -69,19 +76,20 @@ margin-top: 15px;
   text-align: center;
 }
 
+/* Styles for the container of all players */
 #all-players-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+/* Styles for each player container */
 .player,
 .player-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: linear-gradient(to bottom, rgb(51, 51, 95), rgb(5, 64, 5));
-  /* background-color: #25242be0; */
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 25px;
@@ -90,6 +98,7 @@ margin-top: 15px;
   justify-content: flex-start;
 }
 
+/* Styles for player name in player and player details containers */
 .player h2,
 .player-details h2 {
   text-transform: uppercase;
@@ -102,220 +111,163 @@ margin-top: 15px;
   margin-right: -10px;
 }
 
+/* Styles for paragraphs in player and player details containers */
 .player p,
 .player-details p {
   display: flex;
-  flex-direction: column-reverse ;
+  flex-direction: column-reverse;
   color: #faf5f5;
   font-size: 14px;
   margin-bottom: 10px;
   text-align: end;
-  
 }
 
+/* Styles for button containers in player containers */
 .button-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
+/* Styles for buttons in player containers */
 .player .details-button,
-  .player .Add-button,
-  .player .removeButton {
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    width: 100%;
-  }
-  
-  .player .details-button {
-    background-color: #460c85;
-  }
-  
-  .player .Add-button {
-    background-color: #4d9796;
-  }
-  
-  .player .removeButton {
-    background-color: #1d5d68;
-  }
-  
-  .player .details-button:hover,
-  .player .Add-button:hover,
-  .player .removeButton:hover {
-    background-color: #6e6e6e;
-  }
-  
-  /* @media (max-width: 768px) {
-    .player,
-    .players-details {
-      width: 100%;
-    } */
-  /* } */
+.player .Add-button,
+.player .removeButton {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
 
-  img {
-    max-width: 250px;
-    max-height: 250px;
-    min-height: 250px;
+/* Styles for details button in player containers */
+.player .details-button {
+  background-color: #460c85;
+}
+
+/* Styles for add button in player containers */
+.player .Add-button {
+  background-color: #4d9796;
+}
+
+/* Styles for remove button in player containers */
+.player .removeButton {
+  background-color: #1d5d68;
+}
+
+/* Styles for button hover effect in player containers */
+.player .details-button:hover,
+.player .Add-button:hover,
+.player .removeButton:hover {
+  background-color: #6e6e6e;
+}
+
+/* Styles for images */
+img {
+  max-width: 250px;
+  max-height: 250px;
+  min-height: 250px;
+}
+
+/* Styles for the player form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Styles for labels in the player form */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Styles for text input fields in the player form */
+input[type="text"],
+input[type="number"],
+input[type="url"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Styles for the submit button in the player form */
+input[type="submit"] {
+  background-color: #4c6faf;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styles for the submit button hover effect in the player form */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styles for error messages */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 500px) {
+
+  /* Styles for the new player form */
+  #new-player-form {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 5px;
   }
 
-  /* CSS for the player form */
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="url"],
-  select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  input[type="submit"] {
-    background-color: #4c6faf;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  .error-message {
-    color: red;
-    margin-bottom: 10px;
-  }
-
-
-  @media screen and (max-width: 500px) {
-
-    #new-player-form {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      margin: 5px;
-  } 
-
+  /* Styles for the main heading */
   h1 {
-    /* padding-bottom: 20px; */
     text-transform: uppercase;
     color: rgb(153, 200, 238);
     font-size: 2rem;
     text-align: center;
     padding: 1px;
-}
+  }
+  /* Styles for the welcome text */
+  .welcome-text {
+    color: rgb(232, 216, 196);
+    font-size: 14px;
+    margin-top: 30px;
+    text-align: center;
+  }
 
-.welcome-text {
-  color: rgb(232, 216, 196);
-  font-size: 14px; 
-  margin-top: 30px;
-  text-align: center;
-}
-
-
-  
-
-  h2, h3 {
+  /* Styles for the subheadings */
+  h2,
+  h3 {
     color: rgb(221, 244, 174);
-    
     text-align: center;
     padding: -5px;
     margin: 10px;
     margin-bottom: 15px;
-    
-	font-size: 22px;
-	-webkit-text-stroke-width: 1px;
+    font-size: 22px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-}
+  }
 
-
-#add-player-form {
-  width: 100vw; 
-  color: #ccc;
-}
-
-form {
-  max-width: 305px;
-} 
-
+  /* Styles for the add player form */
+  #add-player-form {
+    width: 100vw;
+    color: #ccc;
+  }
+  /* Styles for the add player form */
+  form {
+    max-width: 305px;
+  }
 };
-
-
-/* div#new-player-form {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-div#all-players-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-image: url(./Images/Puppy_and_his_ball.jpg);
-  background-size: cover;
-}
-
-/* Add some basic styling */
-/* .form-group {
-  margin-bottom: 10px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button[type="submit"] {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-h2 {
-  margin-bottom: 10px;
-} */ 
-
-/* <img src="https://i.etsystatic.com/39174003/r/il/2d2424/4510396670/il_794xN.4510396670_ggob.jpg" style="height: 200px; width: 200px";  alt="Puppy Bowl Image" class="flipped-image"> */
