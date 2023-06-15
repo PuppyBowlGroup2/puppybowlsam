@@ -12,6 +12,8 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  padding-right: 5rem;
+  padding-left: 5rem;
 }
 
 /* Styles for heading elements */
@@ -43,6 +45,7 @@ h2 {
 #add-player-form {
   width: 100vw;
   color: #ccc;
+  padding-top: 30px;
 }
 
 /* Styles for the form to add a new player */
@@ -53,7 +56,7 @@ h2 {
   align-content: flex-start;
   align-items: center;
   margin-bottom: -86px;
-  padding: 50px;
+  padding: 25px;
 }
 
 /* Flips the image horizontally */
@@ -178,7 +181,7 @@ img {
 /* Styles for the player form */
 form {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 5px;
 }
 
 /* Styles for labels in the player form */
@@ -224,6 +227,15 @@ input[type="submit"]:hover {
 /* Media query for small screens */
 @media screen and (max-width: 500px) {
 
+  /* Styles for the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(Images/Field\ cropped.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   /* Styles for the new player form */
   #new-player-form {
     display: flex;
@@ -236,10 +248,11 @@ input[type="submit"]:hover {
   h1 {
     text-transform: uppercase;
     color: rgb(153, 200, 238);
-    font-size: 2rem;
+    font-size: 50rem;
     text-align: center;
     padding: 1px;
   }
+
   /* Styles for the welcome text */
   .welcome-text {
     color: rgb(232, 216, 196);
@@ -266,8 +279,11 @@ input[type="submit"]:hover {
     width: 100vw;
     color: #ccc;
   }
+
   /* Styles for the add player form */
   form {
     max-width: 305px;
   }
-};
+}
+
+;
